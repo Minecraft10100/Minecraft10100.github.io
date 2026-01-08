@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Bedrock Main Menu</title>
+
+<!-- Local Fonts -->
+<link rel="stylesheet" href="assets/css/local-fonts.css">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<style>
+.minecraft-shadow {
+    text-shadow: 2px 2px 0px #000;
+}
+.splash-text {
+    text-shadow: 2px 2px 0px #3f3f00;
+}
+</style>
+</head>
+<body class="font-display overflow-hidden select-none">
+
+<div class="relative w-full h-screen flex flex-col items-center justify-center bg-background-light dark:bg-background-dark">
+
+    <!-- Local Background -->
+    <div class="absolute inset-0">
+        <div class="w-full h-full bg-cover bg-center"
+        style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),
+               url('./assets/images/background.jpg');
+               filter: blur(2px);">
+        </div>
+    </div>
+
+    <!-- Menu Container -->
+    <div class="relative z-10 w-full max-w-[1200px] h-full flex flex-col">
+
+        <!-- Title -->
+        <div class="flex-1 flex items-center justify-center">
+            <div class="relative">
+                <h1 class="text-6xl md:text-8xl font-black text-white minecraft-shadow italic uppercase">
+                    Minecraft
+                </h1>
+
+                <div class="absolute -right-4 -bottom-4 transform -rotate-12">
+                    <h2 class="text-yellow-300 text-xl md:text-2xl font-bold splash-text animate-pulse">
+                        Also try Terraria!
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Buttons -->
+        <div class="flex-1 flex justify-center items-start">
+            <div class="flex flex-col gap-3 max-w-[400px] w-full px-4">
+
+                <button class="group relative flex w-full items-center justify-center rounded bg-primary border-b-4 border-green-800 active:border-b-0 active:translate-y-1 transition-all h-14">
+                    <span class="material-symbols-outlined mr-2 text-black text-3xl">play_arrow</span>
+                    <span class="text-black text-xl font-bold uppercase">Play</span>
+                </button>
+
+                <button class="group relative flex w-full items-center justify-center rounded bg-stone border-b-4 border-stone-border active:border-b-0 active:translate-y-1 transition-all h-12 text-white">
+                    <span class="material-symbols-outlined text-gray-300 mr-2">settings</span>
+                    Settings
+                </button>
+
+                <button class="group relative flex w-full items-center justify-center rounded bg-stone border-b-4 border-stone-border active:border-b-0 active:translate-y-1 transition-all h-12 text-white">
+                    <span class="material-symbols-outlined text-gray-300 mr-2">store</span>
+                    Marketplace
+                </button>
+
+                <button class="group relative flex w-full items-center justify-center rounded bg-stone border-b-4 border-stone-border active:border-b-0 active:translate-y-1 transition-all h-12 text-white mt-2">
+                    <span class="material-symbols-outlined text-gray-300 mr-2">logout</span>
+                    Quit Game
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Local Steve -->
+        <div class="absolute bottom-6 right-6 flex flex-col items-end gap-2">
+            <div class="w-32 h-48 animate-bounce" style="animation-duration: 3s;">
+                <img src="./assets/images/steve.png"
+                     alt="Minecraft Steve"
+                     class="w-full h-full object-contain drop-shadow-2xl"
+                     style="image-rendering: pixelated;">
+            </div>
+
+            <button class="flex items-center gap-2 bg-stone/90 hover:bg-stone text-white h-12 px-6 rounded border-b-4 border-stone-border active:border-b-0 active:translate-y-1 transition-all">
+                <span class="material-symbols-outlined text-gray-300">checkroom</span>
+                Dressing Room
+            </button>
+        </div>
+
+        <!-- Version -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 md:right-6 md:left-auto md:translate-x-0">
+            <span class="text-white/80 font-mono text-sm font-bold">
+                v1.20.51
+            </span>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
