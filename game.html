@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft - 00:00 spent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ShadowDev">
+    <link rel="stylesheet" href="/assets/css/ingame/hotbar.css">
+    <link rel="stylesheet" href="/assets/css/ingame/gametopbar.css">
+    <link rel="stylesheet" href="/assets/css/ingame/Canvas.css">
+
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+<div id="gametopbar"></div>
+<div id="hotbar">
+  <div class="hotbarslot"></div>
+  <div class="hotbarslot"></div>
+  <div class="hotbarslot"></div>
+  <div class="hotbarslot"></div>
+  <div class="hotbarslot"></div>
+  <div class="hotbarslot"></div>
+  <div class="hotbarslot"></div>
+  <div id="hotbarslot-chest"></div>
+</div>
+    <!-- Time Spent function -->
+<script>
+  let seconds = 0;
+
+  setInterval(() => {
+    seconds++;
+
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+
+    document.title = `Minecraft - ${String(minutes).padStart(2,"0")}:${String(secs).padStart(2,"0")} spent`;
+  }, 1000);
+</script>
+<!-- little 3d helpers -->
+
+</body>
+</html>
