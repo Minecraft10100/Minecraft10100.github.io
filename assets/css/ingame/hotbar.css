@@ -1,0 +1,15 @@
+.hotbaritem {
+  width: 48px;
+  height: 48px;
+  background-image: url("item.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid grey;
+  box-sizing: border-box; /* prevents size jump */
+}
+
+.hotbaritem.active {
+  border: 3px solid white;
+}
