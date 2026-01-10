@@ -1,0 +1,46 @@
+.topbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  image-rendering: pixelated;
+  font-family: monospace;
+}
+
+/* ❤️ Hearts */
+.hearts, .hunger {
+  display: flex;
+  gap: 2px;
+}
+
+.heart, .food {
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+
+/* Heart states */
+.heart.full   { background-image: url("heart_full.png"); }
+.heart.half   { background-image: url("heart_half.png"); }
+.heart.empty  { background-image: url("heart_empty.png"); }
+
+/* Hunger states */
+.food.full   { background-image: url("food_full.png"); }
+.food.empty  { background-image: url("food_empty.png"); }
+
+/* 🟩 XP Bar */
+.xp {
+  width: 180px;
+  height: 6px;
+  background: #222;
+  border: 1px solid #000;
+}
+
+.xp-fill {
+  height: 100%;
+  width: 65%; /* XP percent */
+  background: linear-gradient(#7CFC00, #32CD32);
+}
