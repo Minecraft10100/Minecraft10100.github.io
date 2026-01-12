@@ -1,6 +1,7 @@
 import { createShaderProgram } from "./shader.js";
 import { mat4 } from "./math.js";
 
+
 export class WebGL3D {
     constructor(canvas) {
         this.gl = canvas.getContext("webgl");
